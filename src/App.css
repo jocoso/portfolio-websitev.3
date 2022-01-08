@@ -1,0 +1,35 @@
+/* ROOT */
+*{
+    font-family: 'Handlee', cursive;
+}
+
+/* UTILITIES */
+
+/* NAVIGATION BAR */
+#nav-bar {
+    font-size: 2.4vw;
+    text-align: right;
+    font-weight: bolder;
+}
+
+#nav-bar img {
+    float: left;
+    width: 7.4vw;
+}
+
+#nav-bar li {
+    display: inline;
+    margin-right: 0.8vw;
+    margin-left: 0.8vw;
+    cursor: pointer;
+}
+
+#nav-bar li:hover {
+    color: red;
+    transition: 1s;
+}
+
+#nav-bar li:active {
+    color: red;
+    text-decoration: underline;
+}
