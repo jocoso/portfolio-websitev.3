@@ -15,7 +15,7 @@
         font-size: 1.5rem;
         text-align: right;
         font-weight: bolder;
-        margin-right: 10px;
+        margin-right: 1vw;
         margin-top: 1rem;
     }
 
@@ -55,7 +55,7 @@
         border-image: url('https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fcdn130.picsart.com%2F255215447003202.png%3Fr1024x1024&f=1&nofb=1') 100 round;
         float: left;
         position:fixed;
-        bottom: 1.4rem;
+        top: 50%;
         left: 1.4rem;
         text-align: center;
     }
@@ -66,4 +66,4 @@
     #contact-bar img {
         width: 2.5rem;
     }
-
+    
