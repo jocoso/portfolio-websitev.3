@@ -3,6 +3,7 @@ import '../App.css';
 
 // importing components
 import NavBar from '../components/soft/navBar';
+import ContactBar from '../components/hard/contactBar';
 
 // importing views
 import AboutView from '../views/AboutView';
@@ -59,8 +60,9 @@ class Frame extends Component {
                 {/*Navigation Bar*/}
                 <NavBar data={this.state.navItems} onClick={this.changeContent} />
                 {/*Content*/}
-                {this.state.currentContent}
+                <div id="content">{this.state.currentContent}</div>
                 {/*Contact Info*/}
+                <ContactBar />
             </div>
         );
     }
