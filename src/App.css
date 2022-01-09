@@ -7,6 +7,9 @@
 }
 
 /* UTILITIES */
+.cool-line {
+  
+}
 
 /* FRAME */
 
@@ -17,11 +20,16 @@
         font-weight: bolder;
         margin-right: 1vw;
         margin-top: 1rem;
+        border: 30px solid;
+        padding: 10px;
+        border-image: url('https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fi.pinimg.com%2Foriginals%2F09%2F91%2Fdd%2F0991dd3e9a9f0bd5f4cc1c4df568ba9c.png&f=1&nofb=1') 100 stretch;
     }
 
     #nav-bar img {
         float: left;
-        width: 7.4vw;
+        position: relative;
+        width: 3%;
+        top: 0;
     }
 
     #nav-bar li {
