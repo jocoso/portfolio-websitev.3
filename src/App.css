@@ -7,6 +7,10 @@
     
 }
 
+:root {
+    --main-radius: 5px;
+    --main-padding: 5px;
+}
 
 /* UTILITIES */
 .cool-line {
@@ -25,15 +29,29 @@
 
 /* FRAME */
 
+#frame {
+    display: grid;
+    height: 100vh;
+    grid-template-columns: 0.6fr 1.2fr 1.2fr 1.2fr;
+    grid-template-rows: 0.5fr 1.5fr 1fr 1fr;
+    grid-template-areas: 
+        "nav nav nav nav"
+        "contact content content content"
+        "contact content content content"
+        "contact content content content";
+    grid-gap: 0.2rem;
+}
+
     /* NAVIGATION BAR */
     #nav-bar {
-        font-size: 1.5rem;
-        text-align: right;
+        border-radius: var(--main-radius);
+        padding: var(--main-padding);
+        grid-area: nav;
+        /* background-color:khaki; */
+        font-size: 1rem;
+        text-align: center;
         font-weight: bolder;
-        margin-right: 1vw;
-        margin-top: 1rem;
         border: 30px solid;
-        padding: 10px;
         border-image: url('https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fi.pinimg.com%2Foriginals%2F09%2F91%2Fdd%2F0991dd3e9a9f0bd5f4cc1c4df568ba9c.png&f=1&nofb=1') 100 stretch;
     }
 
@@ -63,20 +81,25 @@
 
     /* CONTENT */
     #content {
+        padding: var(--main-padding);
+        border-radius: var(--main-radius);
+        grid-area: content;
+        /* background-color: lightblue; */
         position: relative;
-        left: 10rem;
-        top: 5rem;
+
     }
 
     /* CONTACT BAR */
     #contact-bar {
+        grid-area: contact;
+        padding: var(--main-padding);
+        /* background-color:lightgrey; */
         border: 20px solid;
         width: 4rem;
         border-image: url('https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fcdn130.picsart.com%2F255215447003202.png%3Fr1024x1024&f=1&nofb=1') 100 round;
         float: left;
         position:fixed;
-        top: 50%;
-        left: 1.4rem;
+        bottom: 0;
         text-align: center;
     }
 
@@ -87,3 +110,31 @@
         width: 2.5rem;
     }
     
+    @media only screen and (max-width: 550px) {
+        #frame {
+            grid-template-columns: 1fr;
+            grid-template-rows: 0.5fr 2.2fr 0.3fr; 
+            grid-template-areas: 
+                "nav"
+                "content"
+                "contact";
+        }
+
+        #contact-bar {
+            width: 100%;
+            position:static;
+            display: flex;
+            align-items: stretch;
+            justify-content: space-evenly;
+        }
+
+        #contact-bar li {
+            display: inline;
+        }
+
+        #contact-bar img {
+            width: 1.5rem;
+            display: block;
+            flex: 0 1 auto;
+        }
+    }
