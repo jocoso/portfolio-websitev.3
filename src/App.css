@@ -4,9 +4,24 @@
     font-family: 'Superscratchy-4aAD', serif;
     padding: 0;
     margin: 0;
+    
 }
 
+
 /* UTILITIES */
+.cool-line {
+  
+}
+
+.dark-mode {
+    background-color: black;
+    color: white;
+}
+
+.light-mode {
+    background-color: white;
+    color: black;
+}
 
 /* FRAME */
 
@@ -15,13 +30,18 @@
         font-size: 1.5rem;
         text-align: right;
         font-weight: bolder;
-        margin-right: 10px;
+        margin-right: 1vw;
         margin-top: 1rem;
+        border: 30px solid;
+        padding: 10px;
+        border-image: url('https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fi.pinimg.com%2Foriginals%2F09%2F91%2Fdd%2F0991dd3e9a9f0bd5f4cc1c4df568ba9c.png&f=1&nofb=1') 100 stretch;
     }
 
     #nav-bar img {
         float: left;
-        width: 7.4vw;
+        position: relative;
+        width: 3%;
+        top: 0;
     }
 
     #nav-bar li {
@@ -55,7 +75,7 @@
         border-image: url('https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fcdn130.picsart.com%2F255215447003202.png%3Fr1024x1024&f=1&nofb=1') 100 round;
         float: left;
         position:fixed;
-        bottom: 1.4rem;
+        top: 50%;
         left: 1.4rem;
         text-align: center;
     }
@@ -66,4 +86,4 @@
     #contact-bar img {
         width: 2.5rem;
     }
-
+    
