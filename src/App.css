@@ -2,6 +2,8 @@
 *{
     /* font-family: 'Handlee', cursive; */
     font-family: 'Superscratchy-4aAD', serif;
+    background: white;
+    color: black;
     padding: 0;
     margin: 0;
     
@@ -46,8 +48,8 @@
 } */
 
 .dark-mode {
-    background-color: black;
-    color: white;
+    -webkit-filter: invert(100%);
+    filter: invert(100%);
 }
 
 .light-mode {
@@ -149,6 +151,9 @@
         height: 40%;
         width: 4rem;
         text-align: center;
+        position: relative;
+        top: 100%;
+        transform: translateY(-100%);
     }
 
     #contact-bar li {
@@ -170,6 +175,7 @@
         }
 
         #contact-bar {
+            height: 100%;
             width: 100%;
             position:static;
             display: flex;
