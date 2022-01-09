@@ -23,8 +23,23 @@
     border: 2px solid black;
 }
 
-.title {
+.title-1 {
     font-size: 5rem;
+    padding: 2rem 0 2rem 0;
+}
+
+.title-2 {
+    font-size: 3rem;
+    padding: 2rem 0 2rem 0;
+}
+
+.title-3 {
+    font-size: 2rem;
+    padding: 2rem 0 2rem 0;
+}
+
+.title-4 {
+    font-size: 1.5rem;
     padding: 2rem 0 2rem 0;
 }
 
@@ -38,6 +53,29 @@
     position: relative;
     top: 100%;
     transform: translateY(-100%);
+}
+
+.adjacent-containers {
+    background-color: lightskyblue;
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: var(--main-padding);
+    border-radius: var(--main-radius);
+
+}
+
+.adjacent-containers > .left {
+    float: left;
+    width: 50%;
+    height: 100%;
+    margin-right: 10px;
+}
+
+.card {
+    width: 100%;
+    height: 100%;
+    border-radius: var(--main-radius);   
 }
 
 /* .scratchy-border {
@@ -135,9 +173,69 @@
         #profile-img {
             background-image: url('https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fmedia.istockphoto.com%2Fillustrations%2Flandscape-with-mountain-range-graphic-sketch-illustration-id476949880&f=1&nofb=1');
             background-repeat: no-repeat;
-            background-size: cover;
-            
+            background-size: cover; 
         }
+  
+        /* EXPERIENCE */
+        #experience {
+            width: 100%;
+            height: 100%;
+            border-radius: var(--main-radius);
+        }
+        
+        #experience button {
+            display: none;
+        }
+
+        #experience > :nth-child(2) {
+            border-right: 2px solid black;
+            height: 100%;
+            width: 40%;
+            float: left;
+            margin-right: 1rem;
+            padding-top: 5rem;
+        }
+
+        #experience > :last-child {
+            width: 57%;
+            float: left;
+            text-align: center;
+            height: 100%;
+        }
+
+        #experience #selection li {
+            width: 100%;
+            margin:var(--main-padding);
+            cursor:pointer;
+            position: relative;
+            padding: var(--main-padding);
+            margin-bottom: 2rem;
+            list-style-type: none;
+            font-size: var(--font-size);
+            border-radius: var(--main-radius);
+
+        }
+
+        #experience #selection li:hover {
+            color: red;
+            border-left: 10px solid red;
+            border-radius: 0;
+        }
+
+            /* EXPERIENCE CARD */
+            .card-date {
+                border-left: 2px solid black;
+                font-size: 1.5rem;
+                margin: 0 0 1rem 0;
+            }
+
+            .card-responsa li {
+                margin-top: 1rem;
+                text-align: left;
+                list-style-type: none;
+                padding: 1.5rem;
+            }
+
 
     /* CONTACT BAR */
     #contact-bar {
@@ -159,7 +257,7 @@
         width: 3vw;
     }
     
-    @media only screen and (max-width: 550px) {
+    @media only screen and (max-width: 615px) {
         #frame {
             grid-template-columns: 1fr;
             grid-template-rows: 0.5fr 2.2fr 0.3fr; 
@@ -177,7 +275,7 @@
             justify-content: space-evenly;
         }
 
-        #contact-bar li {
+        #contact-bar #selection li {
             display: inline;
         }
 
@@ -186,4 +284,72 @@
             display: block;
             flex: 0 1 auto;
         }
+
+        #experience {
+            display: inline;
+            text-align: center;
+            width: 100%;        
+        }
+
+        #experience > :first-child {
+            width: 100%;
+            float: none;
+        }
+
+        #experience #selection ul li {
+            width: 100%;
+            padding: 0;
+            margin: 0;
+        }
+
+        #experience #selection  > ul > li {
+            background-color: seagreen;
+            padding: 0;
+        }
+
+        #experience #selection > :nth-child(2) {
+            width: 100%;
+        }
+
+        #experience #selection  > :nth-child(3) {
+            width: 100%;
+        }
+
+        /* DROPDOWN */
+        #experience button {
+            display: block;
+            background-color: #3498DB;
+            color: white;
+            padding: 16px;
+            font-size: 16px;
+            border: none;
+            cursor: pointer; 
+            width: 100%;
+        }
+
+        #experience button:hover, #experience button:focus {
+            background-color:#2980B9;
+        }
+
+        #experience ul {
+            position: relative;
+            display: inline-block;
+            position: absolute;
+            width: 100%;
+            background-color: rgba(0, 0, 0);
+            float: none;
+            display: block;
+        }
+
+        #experience ul li {
+            display: none;
+            z-index: 1;
+            color: white;
+            background-color: transparent;
+        }
+
+        .show {
+            display:block!important
+        }
+
     }
