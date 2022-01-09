@@ -27,7 +27,7 @@ class ContactBar extends Component {
 
     render() {
         return(
-            <ul id='contact-bar'>
+            <ul id='contact-bar' className='valign-bottom'>
                 {this.state.items.map(item => {
                     return <li key={item.id}>
                         <a href={item.link} target='_blank'><img src={item.img} /></a>

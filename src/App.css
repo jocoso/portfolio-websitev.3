@@ -10,12 +10,40 @@
 :root {
     --main-radius: 5px;
     --main-padding: 5px;
+    --font-size: 2vw;
 }
 
 /* UTILITIES */
 .cool-line {
   
 }
+
+.profile-frame {
+    border-radius: 100%;
+    border: 2px solid black;
+}
+
+.title {
+    font-size: 5rem;
+    padding: 2rem 0 2rem 0;
+}
+
+.valign-middle {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.valign-bottom {
+    position: relative;
+    top: 100%;
+    transform: translateY(-100%);
+}
+
+/* .scratchy-border {
+    border: 30px solid;
+    border-image: url('https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fi.pinimg.com%2Foriginals%2F09%2F91%2Fdd%2F0991dd3e9a9f0bd5f4cc1c4df568ba9c.png&f=1&nofb=1') 100;
+} */
 
 .dark-mode {
     background-color: black;
@@ -48,10 +76,11 @@
         padding: var(--main-padding);
         grid-area: nav;
         /* background-color:khaki; */
-        font-size: 1rem;
+        font-size: var(--font-size);
         text-align: center;
         font-weight: bolder;
         border: 30px solid;
+        width: 100%;
         border-image: url('https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fi.pinimg.com%2Foriginals%2F09%2F91%2Fdd%2F0991dd3e9a9f0bd5f4cc1c4df568ba9c.png&f=1&nofb=1') 100 stretch;
     }
 
@@ -89,25 +118,45 @@
 
     }
 
+        /* ABOUT ME */
+        #about-me {
+            text-align: center;
+            width: 100%;
+            padding: var(--main-padding);
+            font-size: 2rem;
+        }
+
+        #about-me img {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        #profile-img {
+            background-image: url('https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fmedia.istockphoto.com%2Fillustrations%2Flandscape-with-mountain-range-graphic-sketch-illustration-id476949880&f=1&nofb=1');
+            background-repeat: no-repeat;
+            background-size: cover;
+            
+        }
+
     /* CONTACT BAR */
     #contact-bar {
         grid-area: contact;
         padding: var(--main-padding);
         /* background-color:lightgrey; */
-        border: 20px solid;
+        /* border: 20px solid;
+        border-image: url('https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fcdn130.picsart.com%2F255215447003202.png%3Fr1024x1024&f=1&nofb=1') 100 round; */
+        height: 40%;
         width: 4rem;
-        border-image: url('https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fcdn130.picsart.com%2F255215447003202.png%3Fr1024x1024&f=1&nofb=1') 100 round;
-        float: left;
-        position:fixed;
-        bottom: 0;
         text-align: center;
     }
 
     #contact-bar li {
         list-style-type: none;
+        margin-bottom: 2rem;
     }
     #contact-bar img {
-        width: 2.5rem;
+        width: 3vw;
     }
     
     @media only screen and (max-width: 550px) {
