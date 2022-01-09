@@ -4,11 +4,23 @@
     font-family: 'Superscratchy-4aAD', serif;
     padding: 0;
     margin: 0;
+    
 }
+
 
 /* UTILITIES */
 .cool-line {
   
+}
+
+.dark-mode {
+    background-color: black;
+    color: white;
+}
+
+.light-mode {
+    background-color: white;
+    color: black;
 }
 
 /* FRAME */
