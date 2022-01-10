@@ -184,10 +184,11 @@
         }
         
         #experience button {
+            visibility: hidden;
             display: none;
         }
 
-        #experience > :nth-child(2) {
+        #experience > #selector {
             border-right: 2px solid black;
             height: 100%;
             width: 40%;
@@ -203,7 +204,7 @@
             height: 100%;
         }
 
-        #experience #selection li {
+        #experience li {
             width: 100%;
             margin:var(--main-padding);
             cursor:pointer;
@@ -216,7 +217,7 @@
 
         }
 
-        #experience #selection li:hover {
+        #experience li:hover {
             color: red;
             border-left: 10px solid red;
             border-radius: 0;
@@ -275,7 +276,7 @@
             justify-content: space-evenly;
         }
 
-        #contact-bar #selection li {
+        #contact-bar li {
             display: inline;
         }
 
@@ -291,35 +292,28 @@
             width: 100%;        
         }
 
-        #experience > :first-child {
+        #experience > #selector {
             width: 100%;
             float: none;
-        }
-
-        #experience #selection ul li {
-            width: 100%;
+            border: none;
+            background-color: red;
             padding: 0;
-            margin: 0;
+            height: 0;
         }
 
-        #experience #selection  > ul > li {
-            background-color: seagreen;
-            padding: 0;
-        }
 
-        #experience #selection > :nth-child(2) {
+        #experience > :last-child {
             width: 100%;
-        }
-
-        #experience #selection  > :nth-child(3) {
-            width: 100%;
+            display: block;
+            margin: auto;
+            padding: auto;
         }
 
         /* DROPDOWN */
-        #experience button {
+        #experience > #selector button {
             display: block;
-            background-color: #3498DB;
-            color: white;
+            visibility: visible;
+            color: black;
             padding: 16px;
             font-size: 16px;
             border: none;
@@ -327,29 +321,37 @@
             width: 100%;
         }
 
-        #experience button:hover, #experience button:focus {
-            background-color:#2980B9;
-        }
-
-        #experience ul {
-            position: relative;
-            display: inline-block;
-            position: absolute;
+        #experience > #selector ul {
+            visibility:hidden;
             width: 100%;
-            background-color: rgba(0, 0, 0);
-            float: none;
-            display: block;
+            display: none;
+            height:fit-content !important;
+            background-color: rgba(0, 0, 0, 0.8);
         }
 
-        #experience ul li {
-            display: none;
+        #experience > #selector ul li {
             z-index: 1;
             color: white;
+            font-size: 3vw;
+            margin: 0;
+            padding: 1rem 0 1rem 0;
+            margin-bottom: 0.5rem;
+            border-bottom: 2px solid white;
             background-color: transparent;
         }
 
         .show {
-            display:block!important
+            visibility: visible !important;
+            display: block !important;
+        }
+
+        .card {
+            margin-top: 6vh;
+        }
+
+        .card p, div, ul, li {
+            font-size: 1.3rem !important;
+            color: black;
         }
 
     }

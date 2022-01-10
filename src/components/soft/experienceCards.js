@@ -4,7 +4,7 @@ export default function ExperienceCards(props) {
     const {data} = props;
     return(
         <div className='card experience-card'>
-            <div className='valign-middle'>
+            <div>
             <p className='title-4'>{data.jobTitle}@{data.jobPlace}</p>
             <em className='card-date'>"{data.dateStr} - {data.dateEnd}"</em>
             <ul className='card-responsa'>

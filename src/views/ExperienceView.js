@@ -9,8 +9,8 @@ class ExperienceView extends Component {
             displayedCard: -1,
             showMenu: false,
             jobs: [
-                'Do Something',
                 'Valence College Prep',
+                'Do Something',
                 'Department of Education',
                 'Tech Talent Pipeline',
                 'Lehman College\' Math Lab'
@@ -97,42 +97,46 @@ class ExperienceView extends Component {
     changeDisplayed = (id) => {
 
         const {jobs} = this.state;
-
+        
         if(this.state.displayedCard >= 0) {
             const currJob = jobs[this.state.displayedCard];       
             jobs[this.state.displayedCard] = currJob.substring(0, currJob.length-3);
         } 
-
+        
+        
         jobs[id] = jobs[id] + ' =>';
 
 
         this.setState({displayedCard: id, jobs }, () =>{
             this.dropDown();
-
         });
     }
 
     dropDown = () => {
         this.setState({showMenu: !this.state.showMenu})
     }
+    
 
     render() {
         return(
             <div id='experience'>
-                    <button onClick={this.dropDown}>{this.state.jobCards[this.state.displayedCard]}</button>
-                    <ul id='selection'>
+                <div id='selector'>
+                    <button onClick={this.dropDown}>{this.state.jobs[this.state.displayedCard]}</button>
+                    <ul
+                        className={
+                            this.state.showMenu?'show':''
+                        } 
+                    >
                         {this.state.jobs.map((job, idx) => {
                             return <li 
-                                className={
-                                    this.state.showMenu?'show':''
-                                } 
                                 key={idx} onClick={() => this.changeDisplayed(idx)}><a>{job}</a></li>
                         })}
                     </ul>
-                <div>
+                    </div>
+                    <div>
 
-                    {this.state.jobCards[this.state.displayedCard]}
-                </div>
+                        {this.state.jobCards[this.state.displayedCard]}
+                    </div>
             </div>
         );
     }
