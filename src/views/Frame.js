@@ -20,6 +20,7 @@ class Frame extends Component {
         super(props);
         this.state = {
             currentContent: <AboutView />,
+            mode: true,
             navItems: [
                 {
                     id: 0,
@@ -54,9 +55,22 @@ class Frame extends Component {
         this.setState({currentContent: this.state.navItems[id].component});
     }
 
+    toggleMode = () => {
+        this.setState({mode: !this.state.mode});
+    }
+
     render() {
+        const className = (this.state.mode?'light-mode':'dark-mode');
+        const img = (this.state.mode? 'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fcdn4.iconfinder.com%2Fdata%2Ficons%2Framadan-doodles%2F32%2Fcrescent-moon-ramadan-muslim-islam-star-sky-512.png&f=1&nofb=1' : 'https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fclipart-library.com%2Fimages_k%2Ftransparent-sun-tumblr%2Ftransparent-sun-tumblr-3.png&f=1&nofb=1');
         return (
-            <div id='frame'>
+            <div id='frame' className={className}>
+                {/* Toggle Mode */}
+                <button onClick={this.toggleMode} style={{float: 'left', position: 'fixed', top: '1rem', left: '2rem', border: 'none'}}>
+                    
+                    <img src={img}
+                        width='40'
+                        height='40' />
+                </button>
                 {/*Navigation Bar*/}
                 <NavBar data={this.state.navItems} onClick={this.changeContent} />
                 {/*Content*/}
