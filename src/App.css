@@ -3,8 +3,7 @@
     /* font-family: 'Handlee', cursive; */
     font-family: 'Superscratchy-4aAD', serif;
     padding: 0;
-    margin: 0;
-    
+    margin: 0;  
 }
 
 :root {
@@ -92,6 +91,15 @@
     background-color: white;
     color: black;
 }
+
+.text-centered {
+    text-align: center;
+}
+
+.text-underline {
+    text-decoration: underline;
+}
+
 
 /* FRAME */
 
@@ -236,7 +244,32 @@
                 list-style-type: none;
                 padding: 1.5rem;
             }
+        
+        /* PROJECTS */
+        #projects > #projects-container {
+            height: fit-content;
+            width: fit-content;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .project-thumbnail {
+            height: 10rem;
+            width: 10rem;
+            border-radius: var(--main-radius);
+            background-color: transparent;
+            border: none;
+        }
 
+        .project-thumbnail:active {
+            color: red;
+        }
+        
+        .project-thumbnail img {
+            width: 5rem;
+            height: 5rem;
+        }
+        
 
     /* CONTACT BAR */
     #contact-bar {
