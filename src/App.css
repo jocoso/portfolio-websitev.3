@@ -207,6 +207,10 @@
             padding-top: 5rem;
         }
 
+        #experience > #selector ul li {
+            background-color: transparent;
+        }
+
         #experience > :last-child {
             width: 57%;
             float: left;
