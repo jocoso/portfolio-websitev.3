@@ -15,7 +15,7 @@ body {
 :root {
     --main-radius: 5px;
     --main-padding: 5px;
-    --font-size: 3vw;
+    --font-size: 2.2vw;
 }
 
 /* UTILITIES */
@@ -355,6 +355,7 @@ body {
             margin-top: 15%;
             padding: auto;
             text-align: center;
+            border: 0 !important;
         }
 
         .experience-card {
