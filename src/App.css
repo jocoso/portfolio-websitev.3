@@ -1,24 +1,24 @@
 /* ROOT */
+
 *{
     /* font-family: 'Handlee', cursive; */
     font-family: 'Superscratchy-4aAD', serif;
-    background: white;
-    color: black;
+    background-color: white;
     padding: 0;
-    margin: 0;  
+    margin: 0;
+}
+
+body {
+    width: 100%;
 }
 
 :root {
     --main-radius: 5px;
     --main-padding: 5px;
-    --font-size: 2vw;
+    --font-size: 2.2vw;
 }
 
 /* UTILITIES */
-.cool-line {
-  
-}
-
 .profile-frame {
     border-radius: 100%;
     border: 2px solid black;
@@ -57,7 +57,6 @@
 }
 
 .adjacent-containers {
-    background-color: lightskyblue;
     width: 70%;
     margin-left: auto;
     margin-right: auto;
@@ -75,8 +74,7 @@
 
 .card {
     width: 100%;
-    height: 100%;
-    border-radius: var(--main-radius);   
+    border-radius: var(--main-radius); 
 }
 
 /* .scratchy-border {
@@ -123,12 +121,10 @@
         border-radius: var(--main-radius);
         padding: var(--main-padding);
         grid-area: nav;
-        /* background-color:khaki; */
         font-size: var(--font-size);
         text-align: center;
         font-weight: bolder;
         border: 30px solid;
-        
         border-image: url('https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fi.pinimg.com%2Foriginals%2F09%2F91%2Fdd%2F0991dd3e9a9f0bd5f4cc1c4df568ba9c.png&f=1&nofb=1') 100 stretch;
     }
 
@@ -163,6 +159,7 @@
         grid-area: content;
         /* background-color: lightblue; */
         position: relative;
+        height: 100%;
 
     }
 
@@ -199,39 +196,40 @@
         }
 
         #experience > #selector {
-            border-right: 2px solid black;
-            height: 100%;
             width: 40%;
+            height:inherit;
             float: left;
-            margin-right: 1rem;
-            padding-top: 5rem;
+            /* padding-top: 5rem; */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-right: 2px solid white;
+            padding-right: var(--main-padding);
         }
 
-        #experience > #selector ul li {
-            background-color: transparent;
-        }
 
-        #experience > :last-child {
+        #experience #presentation {
             width: 57%;
+            height: 100%;
             float: left;
             text-align: center;
-            height: 100%;
+            padding-left: var(--main-padding);
         }
 
-        #experience li {
+        #experience > #selector li {
+            background-color: transparent;
             width: 100%;
             margin:var(--main-padding);
             cursor:pointer;
             position: relative;
             padding: var(--main-padding);
-            margin-bottom: 2rem;
             list-style-type: none;
-            font-size: var(--font-size);
+            font-size: 1.5rem;
             border-radius: var(--main-radius);
 
         }
 
-        #experience li:hover {
+        #experience > #selector li:hover {
             color: red;
             border-left: 10px solid red;
             border-radius: 0;
@@ -240,15 +238,20 @@
             /* EXPERIENCE CARD */
             .card-date {
                 border-left: 2px solid black;
-                font-size: 1.5rem;
+                border-right: 2px solid black;
+                font-size: 1.2rem;
                 margin: 0 0 1rem 0;
             }
 
-            .card-responsa li {
+            .card-responsa {
+                margin-top: 3rem;
+            }
+
+            .card-responsa > li {
                 margin-top: 1rem;
                 text-align: left;
                 list-style-type: none;
-                padding: 1.5rem;
+                font-size: 1.3rem;
             }
         
         /* PROJECTS */
@@ -263,11 +266,10 @@
             height: 10rem;
             width: 10rem;
             border-radius: var(--main-radius);
-            background-color: transparent;
             border: none;
         }
 
-        .project-thumbnail:active {
+        .project-thumbnail:active{
             color: red;
         }
         
@@ -281,9 +283,6 @@
     #contact-bar {
         grid-area: contact;
         padding: var(--main-padding);
-        /* background-color:lightgrey; */
-        /* border: 20px solid;
-        border-image: url('https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fcdn130.picsart.com%2F255215447003202.png%3Fr1024x1024&f=1&nofb=1') 100 round; */
         height: 40%;
         width: 4rem;
         text-align: center;
@@ -301,14 +300,13 @@
     }
     
     @media only screen and (max-width: 615px) {
-        body {
-            width: 100%;
-        }
         #frame {
+            margin: 0;
             grid-template-columns: 1fr;
-            grid-template-rows: 0.5fr 2.2fr 0.3fr; 
+            grid-template-rows: 0.5fr 2fr .5fr; 
             grid-template-areas: 
                 "nav"
+                "content"
                 "content"
                 "contact";
         }
@@ -316,10 +314,11 @@
         #contact-bar {
             height: 100%;
             width: 100%;
-            position:static;
+            position:relative;
             display: flex;
             align-items: stretch;
             justify-content: space-evenly;
+            bottom: 0;
         }
 
         #contact-bar li {
@@ -339,20 +338,29 @@
         }
 
         #experience > #selector {
-            width: 100%;
             float: none;
             border: none;
-            background-color: red;
             padding: 0;
             height: 0;
+            width: 100%;
         }
 
 
-        #experience > :last-child {
+        #experience #presentation {
             width: 100%;
             display: block;
-            margin: auto;
+            margin-top: 15%;
             padding: auto;
+            text-align: center;
+            border: 0 !important;
+        }
+
+        .experience-card {
+            border: none;
+        }
+
+        .card-responsa li {
+            margin: 1rem !important;
         }
 
         /* DROPDOWN */
@@ -360,44 +368,55 @@
             display: block;
             visibility: visible;
             color: black;
-            padding: 16px;
-            font-size: 16px;
-            border: none;
+            font-size: 4vw;
             cursor: pointer; 
-            width: 100%;
+            background-color: white;
+            margin-top: 5rem;
+            margin-left:auto;
+            margin-right:auto;
+            padding: 1rem;
         }
 
         #experience > #selector ul {
             visibility:hidden;
-            width: 100%;
+            width: 70%;
+            height: fit-content;
             display: none;
-            height:fit-content !important;
-            background-color: rgba(0, 0, 0, 0.8);
+            background-color: white;
+            position: absolute;
+            top: 0;  
         }
 
         #experience > #selector ul li {
             z-index: 1;
-            color: white;
+            color: black;
             font-size: 3vw;
-            margin: 0;
             padding: 1rem 0 1rem 0;
-            margin-bottom: 0.5rem;
-            border-bottom: 2px solid white;
-            background-color: transparent;
+            background-color: white;
+            width: 100%;
+            margin-left: auto;
+            margin-right: auto;
+            border-bottom: 2px solid black;
+            border-radius: 0;
         }
+
 
         .show {
             visibility: visible !important;
             display: block !important;
         }
 
-        .card {
-            margin-top: 6vh;
+        .card-responsa li {
+            margin: 3.5rem 0 6rem 0;
+            font-size: 1.5rem !important;
+            color: black;
         }
 
-        .card p, div, ul, li {
-            font-size: 1.3rem !important;
-            color: black;
+        #contact-bar {
+            float: none;
+            position: relative;
+            bottom: 0;
+            transform: none;
         }
 
     }

@@ -129,12 +129,11 @@ class ExperienceView extends Component {
                     >
                         {this.state.jobs.map((job, idx) => {
                             return <li 
-                                key={idx} onClick={() => this.changeDisplayed(idx)}><a>{job}</a></li>
+                                key={idx} onClick={() => this.changeDisplayed(idx)}>{job}</li>
                         })}
                     </ul>
                     </div>
-                    <div>
-
+                    <div id='presentation'>
                         {this.state.jobCards[this.state.displayedCard]}
                     </div>
             </div>
