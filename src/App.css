@@ -214,6 +214,7 @@ body {
             float: left;
             text-align: center;
             padding-left: var(--main-padding);
+            border-left: 2px solid black;
         }
 
         #experience > #selector li {
