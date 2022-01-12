@@ -35,9 +35,9 @@ class ProjectsView extends Component {
                     {this.state.projects.map((project, idx) => {
                         return <button key={idx} className='project-thumbnail'>
                             <p>[{project.status}]</p>
-                            <img className='profile-frame' src={project.img} />
-                            <p className='project-title'>{project.title}</p>
-                            <em className='project-status'>{project.status}</em>
+                            <img src={project.img} />
+                            <p>{project.title}</p>
+                            <em>{project.status}</em>
                         </button>
                     })}
                 </div>
