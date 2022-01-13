@@ -60,11 +60,16 @@ class ContactView extends React.Component {
     
     render() {
     return(<div>
-            <h1 className="title">Contact Me</h1>
+            <h1 className="title-2">Contact Me</h1>
             <hr className="classy-line" />
 
-            <form onSubmit={this.handleSubmit} className='form-root' method="POST">
-                <label className="form-label">
+            <form 
+                onSubmit={this.handleSubmit} 
+                className='contact-me' 
+                method="POST"
+            >
+
+                <label>
                     Name:
                     <input 
                         type="text" 
@@ -75,13 +80,13 @@ class ContactView extends React.Component {
                     <input
                         type="text"
                         value={this.state.email}
-                        onChange={this.handleEmail} 
+                        onChange={this.handleEmail}
                     />
                     Subject:
                     <input 
                         type="text" 
                         value={this.state.subject} 
-                        onChange={this.handleSubject} 
+                        onChange={this.handleSubject}
                     />
                     Comment:
                     <textarea  
