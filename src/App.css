@@ -27,21 +27,25 @@ body {
 .title-1 {
     font-size: 5rem;
     padding: 2rem 0 2rem 0;
+    text-align: center;
 }
 
 .title-2 {
     font-size: 3rem;
     padding: 2rem 0 2rem 0;
+    text-align: center;
 }
 
 .title-3 {
     font-size: 2rem;
     padding: 2rem 0 2rem 0;
+    text-align: center;
 }
 
 .title-4 {
     font-size: 1.5rem;
     padding: 2rem 0 2rem 0;
+    text-align: center;
 }
 
 .valign-middle {
@@ -62,7 +66,6 @@ body {
     margin-right: auto;
     padding: var(--main-padding);
     border-radius: var(--main-radius);
-
 }
 
 .adjacent-containers > .left {
@@ -99,7 +102,6 @@ body {
 .text-underline {
     text-decoration: underline;
 }
-
 
 /* FRAME */
 
@@ -215,6 +217,9 @@ body {
             text-align: center;
             padding-left: var(--main-padding);
             border-left: 2px solid black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
 
         #experience > #selector li {
@@ -278,6 +283,42 @@ body {
             width: 5rem;
             height: 5rem;
         }
+
+            /* PROJECT TEMPLATE */
+            .projects-template {
+                z-index: 2;
+                position: fixed;
+                top: 0;
+                left: 50%;
+                transform: translateX(-50%);
+                background-color: white;
+                width: 80vw;
+                height: 90%;
+                overflow: auto;
+                border: 2px solid black;
+                border-radius: var(--main-radius);
+                padding: 2rem;
+                font-size: 1.5rem;
+            }
+
+            .projects-template img {
+                margin: 1.2rem;
+                width: 70%;
+            }
+
+            .projects-template ul, .projects-template div p {
+                text-align: left;
+                margin: 2rem 0 2rem 1rem;
+                list-style: none;
+            }
+
+            .projects-template ul li {
+                margin-bottom: 0.9rem;
+            }
+
+            .projects-template ul li::before {
+                content: "-";
+            }
         
 
     /* CONTACT BAR */

@@ -9,7 +9,6 @@ import ContactBar from '../components/hard/contactBar';
 import AboutView from '../views/AboutView';
 import ExperienceView from '../views/ExperienceView';
 import ProjectsView from '../views/ProjectsView';
-import BlogView from '../views/BlogView';
 import ContactView from '../views/ContactView';
 
 
@@ -39,11 +38,6 @@ class Frame extends Component {
                 },
                 {
                     id: 3,
-                    name: 'Blog',
-                    component: <BlogView />,
-                },
-                {
-                    id: 4,
                     name: 'Contact Me',
                     component: <ContactView />,
                 },
