@@ -59,16 +59,21 @@ class Frame extends Component {
         return (
             <div id='frame' className={className}>
                 {/* Toggle Mode */}
-                <button onClick={this.toggleMode} style={{float: 'left', position: 'fixed', top: '1rem', left: '2rem', border: 'none'}}>
+                <button onClick={this.toggleMode} className='blink-img' style={{float: 'left', position: 'fixed', top: '1rem', left: '2rem', border: 'none'}}>
                     
                     <img src={img}
-                        width='40'
-                        height='40' />
+                        width='30'
+                        height='30' />
                 </button>
                 {/*Navigation Bar*/}
                 <NavBar data={this.state.navItems} onClick={this.changeContent} />
                 {/*Content*/}
-                <div id="content">{this.state.currentContent}</div>
+                <div id="content">
+                    <AboutView />
+                    <ExperienceView className={className} />
+                    <ProjectsView className={className} />
+                    <ContactView className={className} />
+                </div>
                 {/*Contact Info*/}
                 <ContactBar />
             </div>

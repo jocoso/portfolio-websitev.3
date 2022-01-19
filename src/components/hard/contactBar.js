@@ -29,8 +29,8 @@ class ContactBar extends Component {
         return(
             <ul id='contact-bar'>
                 {this.state.items.map(item => {
-                    return <li key={item.id}>
-                        <a href={item.link} target='_blank'><img src={item.img} /></a>
+                    return <li key={item.id} >
+                        <a href={item.link} target='_blank'><img src={item.img} className='blink-img' /></a>
                     </li>
                 })}
             </ul>

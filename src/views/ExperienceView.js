@@ -7,7 +7,7 @@ class ExperienceView extends Component {
 
         this.state = {
             displayedCard: -1,
-            showMenu: false,
+            showMenu: true,
             jobs: [
                 'Valence College Prep',
                 'Do Something',
@@ -121,15 +121,19 @@ class ExperienceView extends Component {
         return(
             <div id='experience'>
                 <div id='selector'>
-                    <button onClick={this.dropDown}>{this.state.jobs[this.state.displayedCard]}</button>
+                    <button className={this.props.className} onClick={() => this.dropDown()}>{this.state.jobs[this.state.displayedCard]}</button>
                     <ul
                         className={
-                            this.state.showMenu?'show':''
+                            this.state.showMenu?'show':'' + this.props.className
                         } 
                     >
                         {this.state.jobs.map((job, idx) => {
                             return <li 
-                                key={idx} onClick={() => this.changeDisplayed(idx)}>{job}</li>
+                                key={idx} 
+                                onClick={() => this.changeDisplayed(idx)}
+                            >
+                                {job}
+                            </li>
                         })}
                     </ul>
                     </div>

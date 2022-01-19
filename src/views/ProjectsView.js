@@ -58,15 +58,16 @@ class ProjectsView extends Component {
 
     render() {
         return(
-            <div id='projects'>
+            <div id='projects' className={this.props.className}>
                 <p className='title-2 text-centered'>Projects</p>
                 <div id='projects-container'>
                     {this.state.projects.map((project, idx) => {
-                        return <button key={idx} onClick={() => this.showProject(project.id)} className='project-thumbnail'>
-                            <p>[{project.status}]</p>
-                            <img className='profile-frame' src={project.img} />
-                            <p>{project.title}</p>
-                            <em>{project.status}</em>
+                        return <button key={idx} onClick={() => this.showProject(project.id)} className='project-thumbnail centered-container'>
+                            <img className='profile-frame left-container' src={project.img} />
+                            <div className='profile-info right-container' >
+                                <p>[{project.status}]</p>
+                                <p>{project.title}</p>
+                            </div>
                         </button>
                     })}
                 </div>
