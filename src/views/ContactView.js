@@ -59,13 +59,13 @@ class ContactView extends React.Component {
     }
     
     render() {
-    return(<div>
+    return(<div id='contact-me'>
             <h1 className="title-2">Contact Me</h1>
             <hr className="classy-line" />
 
             <form 
                 onSubmit={this.handleSubmit} 
-                className='contact-me' 
+                className='contact' 
                 method="POST"
             >
 
