@@ -160,9 +160,14 @@ body {
         color: var(--main-background);
     }
 
-    #nav-bar > * {
+    #nav-bar a * {
         background-color: transparent;
         color: var(--main-background);
+        text-decoration:none;
+    }
+
+    #nav-bar a {
+        text-decoration: none;
     }
 
     #nav-bar img {
@@ -172,19 +177,19 @@ body {
         top: 0;
     }
 
-    #nav-bar li {
+    #nav-bar a li {
         display: inline;
         margin-right: 0.8vw;
         margin-left: 0.8vw;
         cursor: pointer;
     }
 
-    #nav-bar li:hover {
+    #nav-bar a li:hover {
         color: red;
         transition: 1s;
     }
 
-    #nav-bar li:active {
+    #nav-bar a li:active {
         color: red;
         text-decoration: underline;
     }

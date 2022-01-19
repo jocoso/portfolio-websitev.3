@@ -5,10 +5,10 @@ export default function NavBar(props) {
         
         <ul id='nav-bar'>
             [{props.data.map(item => {
-                return <li onClick={() => props.onClick(item.id)}>
+                return <a href={item.link} ><li onClick={() => props.onClick(item.id)}>
                             {item.id}. {item.name} 
                             {(item.id < props.data.length-1)?',':''}
-                        </li>
+                        </li></a>
             })}]
         </ul>
     );
