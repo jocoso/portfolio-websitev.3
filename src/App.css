@@ -165,6 +165,14 @@ body {
         color: var(--main-background);
     }
 
+    #nav-bar a {
+        text-decoration: none;
+    }
+
+    #nav-bar a:visited {
+        color: inherit;
+    }
+
     #nav-bar img {
         float: left;
         position: relative;
