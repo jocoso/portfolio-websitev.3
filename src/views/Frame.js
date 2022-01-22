@@ -24,22 +24,22 @@ class Frame extends Component {
                 {
                     id: 0,
                     name: 'About',
-                    component: <AboutView />,
+                    link: '#about-me',
                 },
                 {
                     id: 1,
                     name: 'Experience',
-                    component: <ExperienceView />,
+                    link: '#experience',
                 },
                 {
                     id: 2,
                     name: 'Projects',
-                    component: <ProjectsView />,
+                    link: '#projects',
                 },
                 {
                     id: 3,
                     name: 'Contact Me',
-                    component: <ContactView />,
+                    link: '#contact-me',
                 },
             ]
         }

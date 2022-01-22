@@ -6,8 +6,10 @@ export default function NavBar(props) {
         <ul id='nav-bar'>
             [{props.data.map(item => {
                 return <li onClick={() => props.onClick(item.id)}>
-                            {item.id}. {item.name} 
-                            {(item.id < props.data.length-1)?',':''}
+                            <a href={item.link}>
+                                {item.id}. {item.name} 
+                                {(item.id < props.data.length-1)?',':''}
+                            </a>
                         </li>
             })}]
         </ul>
