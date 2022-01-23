@@ -203,7 +203,7 @@ body {
         border-radius: var(--main-radius);
         grid-area: media;
         position: relative;
-        height: 100%;
+        width: 100%;
         margin-right: auto;
         margin-left: auto;
     }
@@ -211,7 +211,7 @@ body {
         /* ABOUT ME */
         #about-me {
             text-align: center;
-            width: var(--content-width);
+            width: inherit;
             height: var(--content-height);
             font-size: var(--font-size);
             background-color: var(--main-background);
@@ -232,12 +232,12 @@ body {
             width: 70%;
             font-size: var(--font-size);
             height: var(--content-height);
-            margin: 25% auto 0 auto;
             display: flex;
             justify-content: center;
             align-items: center;
             flex-direction: row;
-            -ms-flex-direction: row;      
+            margin: var(--center-margin);
+            -ms-flex-direction: row;  
         }
 
         #experience .title-2 {
