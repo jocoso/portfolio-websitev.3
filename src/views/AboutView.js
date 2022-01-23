@@ -13,11 +13,9 @@ class AboutView extends Component {
         
         return(
             <div id='about-me'>
-                <div id='profile-img'>
                     <Parallax bgImage={ mountainImage } strength={ 200 } style={inlineStyle} >
                         <img src={ profilePic } className='profile-frame scratchy-border blink-img' />
                     </Parallax>
-                </div>
                 <div className='title-2'>Joshua Collado</div>
                 <p>I am a software engineer specializing in designing and creating programs that help people.</p>
             </div>
