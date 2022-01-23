@@ -225,11 +225,6 @@ body {
             margin-right: auto;
         }
 
-        #profile-img {
-            background-image: url('https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fmedia.istockphoto.com%2Fillustrations%2Flandscape-with-mountain-range-graphic-sketch-illustration-id476949880&f=1&nofb=1');
-            background-repeat: no-repeat;
-            background-size: cover; 
-        }
   
         /* EXPERIENCE */
         #experience {
