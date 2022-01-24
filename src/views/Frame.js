@@ -1,7 +1,5 @@
 import React, {Component} from 'react';
 
-
-
 /*Contains all the components that remains regardless of the content */
 class Frame extends Component {
     constructor(props) {
@@ -13,10 +11,7 @@ class Frame extends Component {
     render() {
         return (
             <div>
-                navbar  navbar     navbar     navbar
-                contact profile    profile    profile 
-                contact experience experience experience
-                contact howler     howler     howler
+                
             </div>
         );
     }
