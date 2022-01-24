@@ -1,5 +1,8 @@
 import React, {Component} from 'react';
 
+import NavBar from '../components/hard/navbar';
+import About from '../views/About';
+
 /*Contains all the components that remains regardless of the content */
 class Frame extends Component {
     constructor(props) {
@@ -11,7 +14,8 @@ class Frame extends Component {
     render() {
         return (
             <div>
-                
+                <NavBar/>
+                <About/>
             </div>
         );
     }

@@ -1,3 +1,26 @@
-.inline-list {
+/* Global */
+:root {
+    
+}
+
+/* List Modification */
+.undecorated-list {
     list-style-type: none;
+}
+
+.inline-list > li {
+    display: inline;
+}
+
+
+/* Link Modification */
+.blank-link {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+/* Margin Modification */
+.rl-mp5 {
+    margin: 0 .5rem 0 .5rem;
 }
