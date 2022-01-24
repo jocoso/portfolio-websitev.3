@@ -1,15 +1,31 @@
 import React from 'react';
 
-class NavBar extends React {
+class NavBar extends React.Component {
     constructor(props) {
         super(props);
 
         this.state = {
             links: [
                 {
-                    id: 'about',
-                    link: '#about'
-                }
+                    id: 'abt',
+                    name: 'About',
+                    link: '#about-me'
+                },
+                {
+                    id: 'exp',
+                    name: 'Experience',
+                    link: '#experience'
+                },
+                {
+                    id: 'prj',
+                    name: 'Projects',
+                    link: '#projects'
+                },
+                {
+                    id: 'cnt',
+                    name: 'Contact Me',
+                    link: '#contact-me'
+                },
             ]
         }
     }
@@ -17,9 +33,18 @@ class NavBar extends React {
     render() {
         return(
             <div>
-                <ul>
-                    {this.state.map((link, idx) => {
-                        
+                <ul className="inline-list">
+                    {this.state.links.map((link, idx) => {
+                        return <li 
+                                className="rl-mp5"  
+                                key={link.id}>
+                                    <a 
+                                        className="blank-link"
+                                        href={link.link}>
+                                        {link.name}
+                                    </a>
+                                    
+                                </li>
                     })}
                 </ul>
             </div>
