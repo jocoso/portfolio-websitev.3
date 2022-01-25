@@ -36,7 +36,7 @@ class NavBar extends React.Component {
                 <ul className="inline-list">
                     {this.state.links.map((link, idx) => {
                         return <li 
-                                className="rl-mp5"  
+                                className="rl-md5"  
                                 key={link.id}>
                                     <a 
                                         className="blank-link"

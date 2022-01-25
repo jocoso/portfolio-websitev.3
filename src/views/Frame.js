@@ -1,7 +1,10 @@
 import React, {Component} from 'react';
 
 import NavBar from '../components/hard/navbar';
+
 import About from '../views/About';
+import Experience from '../views/Experience';
+import Projects from '../views/Projects';
 
 /*Contains all the components that remains regardless of the content */
 class Frame extends Component {
@@ -16,6 +19,8 @@ class Frame extends Component {
             <div>
                 <NavBar/>
                 <About/>
+                <Experience />
+                <Projects />
             </div>
         );
     }
