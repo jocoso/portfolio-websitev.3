@@ -5,6 +5,7 @@ import NavBar from '../components/hard/navbar';
 import About from '../views/About';
 import Experience from '../views/Experience';
 import Projects from '../views/Projects';
+import ContactMe from './ContactMe';
 
 /*Contains all the components that remains regardless of the content */
 class Frame extends Component {
@@ -16,11 +17,12 @@ class Frame extends Component {
 
     render() {
         return (
-            <div>
+            <div id="frame">
                 <NavBar/>
                 <About/>
                 <Experience />
                 <Projects />
+                <ContactMe />
             </div>
         );
     }

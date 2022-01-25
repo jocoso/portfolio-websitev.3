@@ -21,6 +21,8 @@
     cursor: pointer;
 }
 
+/* Orientation Modification */
+
 /* Link Modification */
 .blank-link {
     text-decoration: none;
@@ -93,6 +95,10 @@
 .md-sqr img {
     width: 3rem;
     height: 3rem;
+}
+
+.page-size {
+    height: 100vh;
 }
 
 /* Image Modification */
@@ -171,3 +177,38 @@
     height: 6rem !important;
     width: 6rem !important;
 }
+
+/* ID Modification */
+#nav-bar {
+    z-index: 1;
+    position: fixed;
+    background: white;
+    overflow: hidden;
+    top: 0;
+    width: 100%;
+}
+
+#frame {
+    display: grid;
+    grid-template-areas: "content about      about      about      about"
+                         "content experience experience experience experience"
+                         "content projects   projects   projects   projects"
+                         "content contactme  contactme  contactme  contactme"
+}
+
+#about-me {
+    grid-area: about;
+}
+
+#experience {
+    grid-area: experience;
+}
+
+#projects {
+    grid-area: projects;
+}
+
+#contact-me {
+    grid-area: contactme;
+}
+

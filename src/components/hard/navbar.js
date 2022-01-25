@@ -32,7 +32,7 @@ class NavBar extends React.Component {
 
     render() {
         return(
-            <div>
+            <div id="nav-bar">
                 <ul className="inline-list">
                     {this.state.links.map((link, idx) => {
                         return <li 

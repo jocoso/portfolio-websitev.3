@@ -7,7 +7,7 @@ import FramedPicture from '../components/soft/framedPicture';
 
 export default function About(props) {
     return(
-        <div id="about-me">
+        <div id="about-me" className="page-size vertical-middle">
             <Parallax
                 bgImage={"https://x4s4g5f5.stackpathcdn.com/wp-content/uploads/2020/04/How-to-draw-mountains-1.jpg"}
                 strength={-200}>
