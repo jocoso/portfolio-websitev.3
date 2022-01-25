@@ -37,7 +37,8 @@ class Projects extends React.Component {
 
     render() {
         return(
-            <div div="projects">
+            <div id="projects">
+                <p className="title1">Projects</p>
                 {this.state.projects.map((project, idx) => {
                     return <Modal key={ idx } thumbnail={ project.thumbnail } name={ project.title } > 
                             <p className="title1">Title</p>
