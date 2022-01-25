@@ -1,6 +1,6 @@
 import React from 'react';
 
-import ModalButton from '../components/soft/modalButton';
+import Modal from '../components/soft/modal';
 
 class Projects extends React.Component {
     constructor(props) {
@@ -16,7 +16,21 @@ class Projects extends React.Component {
                     description: '\
                     Rawr was created as an flexible and intuitive alternative to create text-adventure games.\
                     Rawr was made with the sole purpose of allowing art and literature to work together to make text-adventure more intuitive and engaging.',
-                }
+                    links: {
+                        github: 'https://github.com/jocoso/RawrV2'
+                    }
+                },
+                {
+                    title: 'Marvel Wiki',
+                    languages: ['JavaScript', 'CSS', 'HTML'],
+                    thumbnail: 'https://c.wallhere.com/photos/a8/8b/logo_Captain_America_Marvel_Comics_Hydra_comics_minimalism_skull_simple_background-256657.jpg!d',
+                    images: [],
+                    description: 'A small wiki about marvel.',
+                    links: {
+                        github: 'https://github.com/jocoso/MarvelWiki',
+                        website: 'https://jocoso.github.io/MarvelWiki/'
+                    }
+                },
             ]
         }
     }
@@ -24,7 +38,33 @@ class Projects extends React.Component {
     render() {
         return(
             <div div="projects">
-                <ModalButton data={ this.state.projects } />
+                {this.state.projects.map((project, idx) => {
+                    return <Modal key={ idx } thumbnail={ project.thumbnail } name={ project.title } > 
+                            <p className="title1">Title</p>
+
+                            <ul className="undecorated-list inline-list">
+                                {project.languages.map((language, idx) => {
+                                        return <li key={ idx } className="rl-md5"> 
+                                            { language }
+                                        </li>
+                                    })
+                                }
+                            </ul>
+
+                            <p>
+                                {project.description}
+                            </p>
+
+                            <a href={project.links.github}>
+                              --> github   
+                            </a>
+
+                            {
+                                project.links.website?<a href={ project.links.website }>--> website</a>:''
+                            }
+
+                        </Modal>
+                })}
             </div>
         );
     }

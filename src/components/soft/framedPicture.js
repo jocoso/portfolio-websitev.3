@@ -16,6 +16,7 @@ export default function FramedPicture(props) {
     return(
         <div>
             <img src={ props.img } className={ shape } style={ style } />
+            <p>{ props.name }</p>
         </div>
     );
 }
