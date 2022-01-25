@@ -1,4 +1,9 @@
 /* Global */
+* {
+    margin: 0;
+    padding: 0;
+}
+
 :root {
     
 }
@@ -12,6 +17,9 @@
     display: inline;
 }
 
+.button-list {
+    cursor: pointer;
+}
 
 /* Link Modification */
 .blank-link {
@@ -21,6 +29,110 @@
 
 
 /* Margin Modification */
-.rl-mp5 {
+.rl-md5 {
     margin: 0 .5rem 0 .5rem;
+}
+
+
+/* Font Modification */
+.fs5 {
+    font-size: 5rem;
+}
+
+.fs3 {
+    font-size: 3rem;
+}
+
+.fs2 {
+    font-size: 2rem;
+}
+
+
+.title1 {
+    font-size: 2.5rem;
+}
+
+.title2 {
+    font-size: 2rem;
+}
+
+/* Size Modification */
+.w10 {
+    width: 10rem;
+}
+
+.w7 {
+    width: 7rem;
+}
+
+.w5 {
+    width: 5rem;
+}
+
+.p2 {
+    padding: 2rem;
+}
+
+.p1 {
+    padding: 1rem;
+}
+
+.pt1 {
+    padding-top: 1rem;
+}
+
+.pb1 {
+    padding-bottom: 1rem;
+}
+
+/* Image Modification */
+.squared-framed {
+    border-radius: 1rem;
+}
+
+.circled-framed {
+    border-radius: 100%;
+}
+
+/* Decoration Modification */
+.bordered {
+    border: 1px solid black;
+}
+
+.unbordered {
+    border: none;
+}
+
+.general-radius {
+    border-radius: .5rem;
+}
+
+/* Div Modification */
+.dual-container {
+    width: 80%;
+    display: flex;
+}
+
+.dual-container .left, .right {
+    width: 50%;
+    flex: 1;
+}
+
+/* Color Modification */
+.bc-brown {
+    background-color: #C2A786;
+}
+
+/* Button Modification */
+.button-style1 {
+    border: 1px solid black;
+    background-color: #e7ddd0;
+    padding: 1rem;
+    border-radius: .5rem;
+}
+
+.button-style1:active {
+    background-color: rgb(43, 39, 39);
+    color: white;
+    border: 1px solid white;
 }
