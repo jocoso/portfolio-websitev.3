@@ -9,7 +9,7 @@ class ButtonScrollable extends React.Component {
         super(props);
 
         this.state = {
-            show: true,
+            show: false,
         }
     }
 
@@ -18,19 +18,27 @@ class ButtonScrollable extends React.Component {
     }
 
     render() {
-        const scrollStyle = classNames({
+        const scrollClass = classNames({
                                 'right': true,
                                 'smooth-show': this.state.show,
                                 'smooth-hide': !this.state.show
                             });
+        const scrollStyle = {
+            width: this.props.size + 'rem',
+            marginBottom: this.props.separation + 'rem',
+        }
+
+        const buttonStyle = {
+            marginBottom: this.props.separation + 'rem',
+        }
 
         return(
             <div className="dual-container">
-                <button className="button-style1 left" onClick={ this.toggleInfo }>
+                <button className="button-style1 left" style={ buttonStyle } onClick={ this.toggleInfo }>
                     <FramedPicture img={ this.props.img } squared />
                     <p>{ this.props.name }</p>
                 </button>
-                <div className={ scrollStyle }>
+                <div className={ scrollClass } style={ scrollStyle }>
                     { this.props.title }
                     { this.props.content }
                 </div>

@@ -36,9 +36,21 @@
 }
 
 
-/* Margin Modification */
+/* Separation Modification */
 .rl-md5 {
     margin: 0 .5rem 0 .5rem;
+}
+
+.b-md5 {
+    margin-bottom: .5rem;
+}
+
+.b-md9 {
+    margin-bottom: .9rem;
+}
+
+.tb-md5 {
+    margin: .5rem 0 .5rem 0;
 }
 
 
@@ -129,15 +141,30 @@
     border-radius: .5rem;
 }
 
+.undecorated-link {
+    text-decoration: none;
+    color: inherit;
+}
+
+.link-style1 {
+    color: rosybrown;
+    text-decoration: none;
+}
+
+.link-style1:hover {
+    color: brown;
+    font-weight: bold;
+}
+
+
 /* Div Modification */
 .dual-container {
     width: fit-content;
-    height: fit-content;
     display: flex;
     margin: 0;
 }
 
-.dual-container .left, .right {
+.dual-container .left, .dual-container .right {
     width: fit-content;
     padding: 2rem;
 }
@@ -165,11 +192,13 @@
 .smooth-show {
     visibility: visible;
     background-color:lemonchiffon;
+    opacity: 1;
     transition: opacity 0.5s linear;
 }
 
 .smooth-hide {
-    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.5s linear;
 }
 
 /* Color Modification */
