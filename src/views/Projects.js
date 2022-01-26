@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Modal from '../components/soft/modal';
+import ButtonScrollable from '../components/soft/buttonScrollable';
 
 class Projects extends React.Component {
     constructor(props) {
@@ -10,7 +10,7 @@ class Projects extends React.Component {
             projects: [
                 {
                     title: 'Rawr',
-                    languages: ['C++', 'C', 'Shell', 'Makefile'],
+                    languages: ['C++ ', 'C ', 'Shell ', 'Makefile'],
                     thumbnail: 'https://ih1.redbubble.net/image.610105068.0977/st,small,845x845-pad,1000x1000,f8f8f8.u5.jpg',
                     images: [],
                     description: '\
@@ -22,7 +22,7 @@ class Projects extends React.Component {
                 },
                 {
                     title: 'Marvel Wiki',
-                    languages: ['JavaScript', 'CSS', 'HTML'],
+                    languages: ['JavaScript ', 'CSS ', 'HTML '],
                     thumbnail: 'https://c.wallhere.com/photos/a8/8b/logo_Captain_America_Marvel_Comics_Hydra_comics_minimalism_skull_simple_background-256657.jpg!d',
                     images: [],
                     description: 'A small wiki about marvel.',
@@ -37,35 +37,18 @@ class Projects extends React.Component {
 
     render() {
         return(
-            <div id="projects">
-                <p className="title1">Projects</p>
-                {this.state.projects.map((project, idx) => {
-                    return <Modal key={ idx } thumbnail={ project.thumbnail } name={ project.title } > 
-                            <p className="title1">Title</p>
-
-                            <ul className="undecorated-list inline-list">
-                                {project.languages.map((language, idx) => {
-                                        return <li key={ idx } className="rl-md5"> 
-                                            { language }
-                                        </li>
-                                    })
-                                }
-                            </ul>
-
-                            <p>
-                                {project.description}
-                            </p>
-
-                            <a href={project.links.github}>
-                              --> github   
-                            </a>
-
-                            {
-                                project.links.website?<a href={ project.links.website }>--> website</a>:''
-                            }
-
-                        </Modal>
-                })}
+            <div id="projects" className="page-size">
+                <div className="vertical-middle">
+                    <p className="title1">Projects</p>
+                    {this.state.projects.map((project, idx) => {
+                        return <ButtonScrollable key={ idx } 
+                                    img={ project.thumbnail } 
+                                    name={ project.title } 
+                                    title={ project.title }
+                                    content={ <div><div>{project.languages}</div><div>{project.description}</div></div> }
+                                />
+                    })}
+                </div>
             </div>
         );
     }

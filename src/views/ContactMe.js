@@ -8,9 +8,11 @@ class ContactMe extends React.Component {
 
     render() {
         return(
-            <div id="contact-me">
-                <p className="title1">Contact Me</p>
-                <a href="mailto: joshua.collado022@gmail.com">Hit me up.</a>
+            <div id="contact-me" className="page-size">
+                <div className="vertical-middle">
+                    <p className="title1">Contact Me</p>
+                    <a href="mailto: joshua.collado022@gmail.com">Hit me up.</a>
+                </div>
             </div>
         );
     }

@@ -48,9 +48,11 @@ class Experience extends React.Component {
 
     render() {
         return(
-            <div id="experience">
-                <p className="title1">Experience</p> 
-                <ScrollableMenu data={ this.state.info } />
+            <div id="experience" className="page-size">
+                <div className="vertical-middle">
+                    <p className="title1">Experience</p> 
+                    <ScrollableMenu data={ this.state.info } />
+                </div>
             </div>
         );
     }
