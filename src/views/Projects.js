@@ -39,13 +39,20 @@ class Projects extends React.Component {
         return(
             <div id="projects" className="page-size">
                 <div className="vertical-middle">
-                    <p className="title1">Projects</p>
+                    <p className="title1 b-md9">Projects</p>
                     {this.state.projects.map((project, idx) => {
                         return <ButtonScrollable key={ idx } 
                                     img={ project.thumbnail } 
                                     name={ project.title } 
                                     title={ project.title }
-                                    content={ <div><div>{project.languages}</div><div>{project.description}</div></div> }
+                                    size={ 25 }
+                                    separation={ 2 }
+                                    content={ <div>
+                                                <p className="b-md5">Language: {project.languages}</p>
+                                                <p className="b-md5">Description:{project.description}</p>
+                                                {(project.links.github)?<div><a className="link-style1" href={project.links.github} target="_blank" >>Github</a></div>:''}
+                                                {(project.links.website)?<div><a className="link-style1" href={project.links.website} target="_blank" >>Website</a></div>:''}
+                                              </div> }
                                 />
                     })}
                 </div>
