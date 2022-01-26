@@ -22,6 +22,12 @@
 }
 
 /* Orientation Modification */
+.vertical-middle {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
 
 /* Link Modification */
 .blank-link {
@@ -125,33 +131,45 @@
 
 /* Div Modification */
 .dual-container {
-    width: 80%;
+    width: fit-content;
+    height: fit-content;
     display: flex;
+    margin: 0;
 }
 
 .dual-container .left, .right {
-    width: 50%;
-    flex: 1;
+    width: fit-content;
+    padding: 2rem;
 }
 
 .modal-content {
     z-index: 2;
-    position: fixed;
-    top: .5rem;
+    position: absolute;
+    top: 1rem;
     left: 50%;
     transform: translateX(-50%);
     background-color: white;
-    width: 80%;
+    width: 80vh;
     height: 98%;
 }
 
 .modal-bg {
     z-index: 1;
-    position: fixed;
+    position: absolute;
     top: 0;
-    width: 100%;
+    width: 100vh;
     background-color: rgba(0, 0, 0, 0.9);
     height: 100%;
+}
+
+.smooth-show {
+    visibility: visible;
+    background-color:lemonchiffon;
+    transition: opacity 0.5s linear;
+}
+
+.smooth-hide {
+    visibility: hidden;
 }
 
 /* Color Modification */
