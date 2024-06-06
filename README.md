@@ -1,70 +1,98 @@
-# Getting Started with Create React App
+# Portfolio Website
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Welcome to my portfolio repository! This project showcases my work and provides an overview of my skills and projects.
 
-## Available Scripts
+## Table of Contents
 
-In the project directory, you can run:
+- [Overview](#overview)
+- [Features](#features)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Technologies](#technologies)
+- [Contributing](#contributing)
+- [License](#license)
+- [Contact](#contact)
 
-### `npm start`
+## Overview
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+This is the third version of my portfolio website. It highlights my latest projects, skills, and provides information about me as a developer. The website is designed to be responsive and user-friendly. This website is under construction.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+![Portfolio Screenshot](path/to/screenshot.png) <!-- Will replace with actual path to screenshot -->
 
-### `npm test`
+## Features
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- **Responsive Design:** Works seamlessly on various devices.
+- **Project Showcases:** Displays my best work with detailed descriptions.
+- **Contact Form:** Allows visitors to get in touch with me easily.
+- **Interactive UI:** Engaging and smooth user experience.
 
-### `npm run build`
+## Installation
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+To run this project locally, follow these steps:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/jocoso/portfolio-websitev.3.git
+   ```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+2. **Navigate to the project directory:**
+   ```bash
+   cd portfolio-websitev.3
+   ```
 
-### `npm run eject`
+3. **Install dependencies:**
+   ```bash
+   npm install
+   ```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+4. **Start the development server:**
+   ```bash
+   npm start
+   ```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+   The website should now be running at `http://localhost:3000`.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Usage
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+After installation, you can explore the following sections:
 
-## Learn More
+- **Home:** Overview of my portfolio.
+- **About:** Information about me.
+- **Projects:** Detailed descriptions and links to my work.
+- **Contact:** Form to reach out to me.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Technologies
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+This project is built using the following technologies:
 
-### Code Splitting
+- **Frontend:** React, CSS, HTML
+- **Backend:** Node.js 
+- **Build Tools:** Webpack, Babel
+- **Deployment:** Github Pages
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## Contributing
 
-### Analyzing the Bundle Size
+Contributions are welcome! Here’s how you can help:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+1. **Fork the repository.**
+2. **Create a new branch:** `git checkout -b feature-branch`
+3. **Make your changes and commit them:** `git commit -m 'Add new feature'`
+4. **Push to the branch:** `git push origin feature-branch`
+5. **Open a Pull Request.**
 
-### Making a Progressive Web App
+Please ensure your pull request adheres to the project's contribution guidelines.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## License
 
-### Advanced Configuration
+This project is licensed under the MIT License. See the [LICENSE](https://choosealicense.com/licenses/mit/) file for details.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+## Contact
 
-### Deployment
+If you have any questions or feedback, feel free to reach out:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+- **Email:** [joshua.collado022@gmail.com](mailto:joshua.collado022@gmail.com)
+- **LinkedIn:** [Jocoso5273](https://www.linkedin.com/in/jocoso5273/)
 
-### `npm run build` fails to minify
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Thank you for visiting my portfolio!
