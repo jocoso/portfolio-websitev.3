@@ -22,11 +22,13 @@ This is the third version of my portfolio website. It highlights my latest proje
 
 Old Portfolio:
 
-<img src="./src/assets/images/old.png" alt="picture of old portfolio." height="300px" /> <!-- Will replace with actual path to screenshot -->
+<img src="./src/assets/images/old.png" alt="picture of old portfolio." width="700px" /> <!-- Will replace with actual path to screenshot -->
 
 New Plan:
 
-<img src="./src/assets/images/new.png" alt="picture of old portfolio." width="500px" /> <!-- Will replace with actual path to screenshot -->
+<img src="./src/assets/images/new.png" alt="picture of old portfolio." width="700px" /> <!-- Will replace with actual path to screenshot -->
+
+<img src="./src/assets/images/flowchart.png" alt="picture of old portfolio." width="700px" /> <!-- Will replace with actual path to screenshot -->
 
 ## Features
 
