@@ -1,6 +1,8 @@
 # Portfolio Website
 
-Welcome to my portfolio repository! This project showcases my work and provides an overview of my skills and projects.
+Welcome to my portfolio repository! This project showcases my work and provides an overview of my skills and projects. 
+
+***- This Portafolio Is Still Under Construction. -***
 
 ## Table of Contents
 
@@ -17,7 +19,13 @@ Welcome to my portfolio repository! This project showcases my work and provides 
 
 This is the third version of my portfolio website. It highlights my latest projects, skills, and provides information about me as a developer. The website is designed to be responsive and user-friendly. This website is under construction.
 
-![Portfolio Screenshot](path/to/screenshot.png) <!-- Will replace with actual path to screenshot -->
+Old Portfolio:
+
+<img src="./src/assets/images/old.png" alt="picture of old portfolio." height="300px" /> <!-- Will replace with actual path to screenshot -->
+
+New Plan:
+
+<img src="./src/assets/images/new.png" alt="picture of old portfolio." width="500px" /> <!-- Will replace with actual path to screenshot -->
 
 ## Features
 
