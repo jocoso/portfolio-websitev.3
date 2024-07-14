@@ -9,12 +9,15 @@ import OtherProjectsSection from './assets/components/Pages/OtherProjectsSection
 import Section from './assets/components/Pages/Section';
 import StarProjectsSection from './assets/components/Pages/StarProjectsSection';
 
+import React from 'react';
+
 function App() {
   return (
     <div className="App">
+
+      {/* ================================================
       <h1>PAGES</h1>
-      ================================================
-      
+      ================================================ */}
       <HeaderSection />
       <HeroSection />
       <StarProjectsSection/> 
@@ -23,12 +26,13 @@ function App() {
       <ContactMeSection />
       <FooterSection />
 
-      ================================================
+      {/* ================================================
       <h1>FUNCTIONS</h1>
       ================================================
       <Section />
       <Card />
-      <FramedImage />
+      <FramedImage /> */}
+
     </div>
   );
 }
