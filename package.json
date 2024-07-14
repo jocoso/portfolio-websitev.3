@@ -12,6 +12,9 @@
     "react-scripts": "^5.0.1",
     "web-vitals": "^2.1.4"
   },
+  "resolutions": {
+    "react": "^17.0.2"
+  },
   "scripts": {
     "start": "react-scripts start",
     "build": "webpack",
@@ -40,6 +43,7 @@
     "@babel/core": "^7.24.8",
     "@babel/preset-env": "^7.24.8",
     "@babel/preset-react": "^7.24.7",
+    "@wojtekmaj/enzyme-adapter-react-17": "^0.8.0",
     "css-loader": "^7.1.2",
     "file-loader": "^6.2.0",
     "style-loader": "^4.0.0",
