@@ -1,42 +1,46 @@
-import Card from './assets/components/Cards';
-import FramedImage from './assets/components/FramedImage'; 
-import AboutMeSection from './assets/components/Pages/AboutMeSection';
-import ContactMeSection from './assets/components/Pages/ContactMeSection';
-import FooterSection from './assets/components/Pages/FooterSection';
 import HeaderSection from './assets/components/Pages/HeaderSection';
 import HeroSection from './assets/components/Pages/HeroSection';
-import OtherProjectsSection from './assets/components/Pages/OtherProjectsSection';
-import Section from './assets/components/Pages/Section';
-import StarProjectsSection from './assets/components/Pages/StarProjectsSection';
 
-import React from 'react';
+import React, {Component} from 'react';
 
-import './index.css';
+import './reset.css';
+import './styles.css';
 
-function App() {
-  return (
-    <div className="App">
+class App extends Component {
+  constructor(props) {
+    super(props);
 
-      {/* ================================================
-      <h1>PAGES</h1>
-      ================================================ */}
-      <HeaderSection />
-      <HeroSection />
-      <StarProjectsSection/> 
-      <AboutMeSection />
-      <OtherProjectsSection />
-      <ContactMeSection />
-      <FooterSection />
+    this.state = {
+      activePage: <HeroSection />
+    }
+  }
 
-      {/* ================================================
-      <h1>FUNCTIONS</h1>
-      ================================================
-      <Section />
-      <Card />
-      <FramedImage /> */}
+  changeActivePage = async (page) => {
+    this.setState({ activePage: page });
+  };
 
-    </div>
-  );
+  render() {
+    return (
+      <div className="App">
+  
+        {/* ================================================
+        <h1>PAGES</h1>
+        ================================================ */}
+        <HeaderSection func={this.changeActivePage} />
+        <hr/>
+  
+  
+        {/* ================================================
+        <h1>FUNCTIONS</h1>
+        ================================================
+        <Section />
+        <Card />
+        <FramedImage /> */}
+  
+      </div>
+    );
+  }
+  
 }
 
 export default App;

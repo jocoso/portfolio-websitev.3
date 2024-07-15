@@ -1,0 +1,14 @@
+:root {
+    --light-color: #fcf6f5ff;
+    --highlight-color: #990011ff;
+}
+
+body,
+html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    font-family: Arial, sans-serif;
+}
+
