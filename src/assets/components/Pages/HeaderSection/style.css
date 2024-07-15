@@ -1,0 +1,51 @@
+#header-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #5B507A; /* Adjust the color if necessary */
+    padding: 10px 20px; /* Adjust padding for spacing */
+}
+
+#logo {
+    /* Ensures the logo is properly aligned and sized */
+    height: 50px; /* Adjust based on your logo */
+    width: auto;
+}
+
+.nav-bar {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    font-size: larger;
+    text-align: center;
+}
+
+.nav-bar > .nav-link {
+    color: #B9E28C; /* White text */
+    text-decoration: none;
+    margin-left: 20px; /* Spacing between links */
+    font-size: 16px; /* Adjust font size as needed */
+    transition: color 0.3s; /* Smooth transition for hover effect */
+}
+
+.nav-bar li {
+    display:inline;
+    padding: 10px;
+}
+
+.nav-bar a {
+    color: #9EADC8; /* Initial color */
+    text-decoration: none;
+    transition: color 0.3s; /* Smooth transition for hover effect */
+    
+}
+
+.nav-link:hover {
+    text-decoration: none;
+    color: #B9E28C; /* Change on hover */
+}
+
+.nav-link.active {
+    color: #FF69B4; /* Hot Pink */
+    font-weight: bold; /* Enhance visibility for the active page */
+}

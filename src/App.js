@@ -11,6 +11,8 @@ import StarProjectsSection from './assets/components/Pages/StarProjectsSection';
 
 import React from 'react';
 
+import './index.css';
+
 function App() {
   return (
     <div className="App">
