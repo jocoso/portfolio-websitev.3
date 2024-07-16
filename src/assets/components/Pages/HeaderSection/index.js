@@ -1,23 +1,33 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
-import { IoClose, IoMenu } from "react-icons/io5";
+// import { IoClose, IoMenu } from "react-icons/io5";
 
 import FramedImage from "../../FramedImage";
 import swi from "../../../images/switch.png";
 import scratchPng from "../../../images/scratch.png";
 import scratchSnd from "../../../sounds/scribble.mp3";
+import homePng from "../../../images/home.png";
+import workPng from "../../../images/work.png";
+import mediaPng from "../../../images/media.png";
+import archivePng from "../../../images/archive.png";
 import "./styles.css";
 
 const HeaderSection = () => {
     const [menuOpen, setMenuOpen] = useState(false);
     const [activeLink, setActiveLink] = useState(0);
-    const [linkAudio, setLinkAudio] = useState(new Audio(scratchSnd));
+    const [linkAudio] = useState(new Audio(scratchSnd));
+
+    useEffect(() => {
+        const savedOption = Number.parseInt(localStorage.getItem("SelectedOption") || 0);
+        setActiveLink(savedOption);
+    }, []);
 
     const handleMenuToggle = () => {
         setMenuOpen(!menuOpen);
     };
 
     const handleNavLinkClick = (index) => {
+        localStorage.setItem("SelectedOption", index);
         linkAudio.play();
         setActiveLink(index);
     };
@@ -29,20 +39,19 @@ const HeaderSection = () => {
                     <li className="nav-item">
                         <NavLink
                             to="/"
-                            className="nav-link"
-                            activeClassName="active"
-                            onClick={() => {
-                                handleNavLinkClick(0);
-                            }} // change to is active which will set the others to false
+                            className={`nav-link ${activeLink === 0 ? "active" : ""}`}
+                            onClick={() => handleNavLinkClick(0)}
                         >
+                            {/* <img src={homePng} alt="" width={100} /> */}
                             Home
                         </NavLink>
-                        {/* If it is active */}
                         {activeLink === 0 && (
                             <img
                                 src={scratchPng}
                                 alt=""
                                 className="overlay-image"
+                                width={60}
+                                height={40}
                             />
                         )}
                     </li>
@@ -50,21 +59,19 @@ const HeaderSection = () => {
                     <li className="nav-item">
                         <NavLink
                             to="/work"
-                            exact
-                            className="nav-link"
-                            activeClassName=""
-                            onClick={() => {
-                                handleNavLinkClick(1);
-                            }}
+                            className={`nav-link ${activeLink === 1 ? "active" : ""}`}
+                            onClick={() => handleNavLinkClick(1)}
                         >
+                            {/* <img src={workPng} alt="" width={100} /> */}
                             Work
                         </NavLink>
-                        {/* If it is active */}
                         {activeLink === 1 && (
                             <img
                                 src={scratchPng}
                                 alt=""
                                 className="overlay-image"
+                                width={60}
+                                height={40}
                             />
                         )}
                     </li>
@@ -72,21 +79,19 @@ const HeaderSection = () => {
                     <li className="nav-item">
                         <NavLink
                             to="/media"
-                            exact
-                            className="nav-link"
-                            activeClassName=""
-                            onClick={() => {
-                                handleNavLinkClick(2);
-                            }}
+                            className={`nav-link ${activeLink === 2 ? "active" : ""}`}
+                            onClick={() => handleNavLinkClick(2)}
                         >
+                            {/* <img src={mediaPng} alt="" width={100} /> */}
                             Media
                         </NavLink>
-                        {/* If it is active */}
                         {activeLink === 2 && (
                             <img
                                 src={scratchPng}
                                 alt=""
                                 className="overlay-image"
+                                width={60}
+                                height={40}
                             />
                         )}
                     </li>
@@ -94,21 +99,19 @@ const HeaderSection = () => {
                     <li className="nav-item">
                         <NavLink
                             to="/archive"
-                            exact
-                            className="nav-link"
-                            activeClassName=""
-                            onClick={() => {
-                                handleNavLinkClick(3);
-                            }}
+                            className={`nav-link ${activeLink === 3 ? "active" : ""}`}
+                            onClick={() => handleNavLinkClick(3)}
                         >
+                            {/* <img src={archivePng} alt="" width={100} /> */}
                             Archive
                         </NavLink>
-                        {/* If it is active */}
                         {activeLink === 3 && (
                             <img
                                 src={scratchPng}
                                 alt=""
                                 className="overlay-image"
+                                width={70}
+                                height={40}
                             />
                         )}
                     </li>

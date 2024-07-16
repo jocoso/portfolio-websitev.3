@@ -1,11 +1,13 @@
 import React from 'react';
+import "./style.css"
 
 class HeroSection extends React.Component {
     render() {
         return (
-            <div className="hero-section">
-                <h1>Hero Section</h1>
-            </div>
+            <section id="hero-section">
+                <h1 className="header-name">Joshua Collado</h1>
+                <p>Web Designer</p>
+            </section>
         )
     }
 }
